@@ -40,26 +40,60 @@ body{
 
 
 /* body styling starts  */
+body{
+    place-items: center;
+    background: #AB47BC;
+    font-family: 'Noto Sans', sans-serif;
+}
 .form-control, button {  
     box-shadow: none!important;
     outline: -webkit-focus-ring-color auto 0px!important;
   }
-
-
-
-
-
-
-
-
-
-  @media (max-width: 768px) {
-    .navbar-right {
-      flex-wrap: wrap;
-    }
-    
-    .navbar-button {
-      margin: 5px;
-    }
-  }
-  
+.profile-pic{
+    font-size: 200px;
+    color:rgb(242, 104, 104);
+    background-color: transparent;
+    box-shadow:  20px 20px 60px #d54907, 
+             -20px -20px 60px #956705;
+}
+.profile-button{
+	color:white;
+	padding:10px; 
+    border:2px black solid;
+    border-radius: 10px;
+    background: #AB47BC;
+    font-weight: bolder;
+}
+.profile-button:hover{
+    background-color: orange;
+    color:black;
+}
+.card{
+    width:100%;
+    color:white;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #9a40a9, #b74cc9);
+    box-shadow:  20px 20px 60px #913ca0, 
+             -20px -20px 60px #c552d8;
+    border: none;
+}
+.hanging-board {
+    text-align: center;
+    width: 200px;
+    margin-top:-25px;
+    margin-right: -100px;
+    margin-left: 50px;
+}
+.hanging-board img{
+    width: 100%;
+}
+.hanging-board button{
+    margin-top: -170px;
+    width:130px;
+    height:50px;
+    font-weight: 700;
+    border: 1px red solid;
+}
+#logout:hover{
+    background-color: #9a40a9;
+}

@@ -28,3 +28,6 @@ if (!sessionStorage.getItem('activeUser')) {
     window.location.href = '/login';
   }
 
+ let user = JSON.parse(sessionStorage.getItem("activeUser"));
+document.getElementById("name").innerText = user.firstName.toUpperCase() + " " + user.lastName.toUpperCase();
+document.getElementById("email").innerText = user.email;
