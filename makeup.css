@@ -1,0 +1,147 @@
+/* navbar styling starts */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+}
+.navbar-left{
+    flex-grow: 1;
+}
+.navbar-right{
+    display: flex;
+}
+.navbar-button{
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar-button:hover{
+    color: red;
+    cursor: pointer;
+    transition: ease-in-out;
+}
+.nav-brand-name:hover{
+    color:yellow;
+}
+
+/* navbar styling ends */
+
+.brand-name h1{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 45px;
+    margin-top: 30px;
+}
+.brand-name p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    padding: 10px 40px;
+    font-weight: lighter;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+.mainpage-btns{
+    padding: 10px 40px;
+}
+#signup-2{
+    background-color: white;
+    color:black;
+    width:200px;
+    height:50px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+}
+#login-2{
+    width:200px;
+    height:50px;
+    background-color: black;
+    color:white;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+}
+.mainpage-section2{
+    display: flex;
+    justify-content: space-between;
+}
+.my-shop-brand-img img{
+    margin-top: -100px;
+    width: 100%;
+    height:80vh;
+}
+#login-2:hover{
+    background-color: white;
+    color:black;
+}
+#signup-2:hover{
+    background-color: black;
+    color:white;
+}
+.signup-img img{
+    width: 100%;
+    height: 80vh;
+}
+.continue-btn{
+    width:100%;
+    height:50px;
+    background-color: orangered;
+    color: white;
+}
+.next-btn{
+    width:100%;
+    height:50px;
+    background-color: orangered;
+    color: white;
+}
+.create-btn{
+    width:100%;
+    height:50px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.signup-form-login-btn{
+    width:100%;
+    height:50px;
+    background-color: antiquewhite;
+    color: blue;
+}
+.form-control , button{  
+    box-shadow: none!important;
+    outline: -webkit-focus-ring-color auto 0px!important;
+  }
+.mobile-number:active{
+    border: none;
+    outline: none;
+}
+.form-control label{
+    font-weight: 500;
+}
+.form-control input{
+    border-color: grey;
+}
+.modal-body{
+    margin-top: -20px;
+}
+#signupModal2{
+    color:brown;
+    font-weight:bolder;
+}
+footer{
+    margin-bottom: -20px;
+}

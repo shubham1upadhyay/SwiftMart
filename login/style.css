@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    padding:0px;
+}
+
+/* navbar styling starts */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+}
+.navbar-left{
+    flex-grow: 1;
+}
+.navbar-right{
+    display: flex;
+}
+.navbar-button{
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar-button:hover{
+    color: red;
+    cursor: pointer;
+    transition: ease-in-out;
+}
+.brand-name:hover{
+    color:yellow;
+}
+
+/* navbar styling ends */
+
+
+
+
+.login-banner img{
+    height:80vh;
+}
+.login-form{
+    width:100%;
+}
+.login-btn{
+    width:80%;
+    height:50px;
+    background-color: orangered;
+    color: white;
+    font-weight: 700;
+    border: none;
+    font-size: 18px;
+}
+.login-form-signup-btn{
+    width:max-content;
+    height:50px;
+    background-color: green;
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+.login-form-signup-btn:hover{
+    background-color:yellow;
+    color:black;
+}
+.login-btn:hover{
+    background-color: black;
+    color: white;
+}
+.form-control label{
+    font-weight:500;
+}
+
+.form-control , button{  
+    box-shadow: none!important;
+    outline: -webkit-focus-ring-color auto 0px!important;
+}

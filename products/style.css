@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+    padding:0px;
+}
+
+/* navbar styling starts */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+}
+.navbar-left{
+    flex-grow: 1;
+}
+.navbar-right{
+    display: flex;
+}
+.navbar-button{
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar-button:hover{
+    color: red;
+    cursor: pointer;
+    transition: ease-in-out;
+}
+.brand-name:hover{
+    color:yellow;
+}
+
+/* navbar styling ends */

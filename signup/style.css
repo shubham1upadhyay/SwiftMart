@@ -1,0 +1,90 @@
+body{
+    margin: 0px;
+    padding:0px;
+}
+
+/* navbar styling starts */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+}
+.navbar-left{
+    flex-grow: 1;
+}
+.navbar-right{
+    display: flex;
+}
+.navbar-button{
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbar-button:hover{
+    color: red;
+    cursor: pointer;
+    transition: ease-in-out;
+}
+.brand-name:hover{
+    color:yellow;
+}
+
+/* navbar styling ends */
+.signup-form-login-btn{
+    width:100%;
+    height:50px;
+    background-color: antiquewhite;
+    color: blue;
+}
+.signup-img img{
+    width: 100%;
+    height: 80vh;
+}
+.continue-btn{
+    width:100%;
+    height:50px;
+    background-color: orangered;
+    color: white;
+}
+.next-btn{
+    width:100%;
+    height:50px;
+    background-color: orangered;
+    color: white;
+}
+.signup-form-login-btn{
+    width:100%;
+    height:50px;
+    background-color: antiquewhite;
+    color: blue;
+}
+.sign-up-form{
+    width: 100%;
+    margin: 100px;
+}
+.card-title h4{
+    margin-top: -40px;
+}
+.create-btn{
+    width:100%;
+    height:50px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+.form-control , button{  
+    box-shadow: none!important;
+    outline: -webkit-focus-ring-color auto 0px!important;
+  }
+  #second{
+    display: none;
+  }
