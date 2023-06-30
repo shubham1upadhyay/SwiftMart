@@ -14,14 +14,14 @@
 <!-- navbar -->
 <nav class="navbar">
   <div class="navbar-left">
-    <button class="navbar-button nav-brand-name fs-5">Swift Mart</button>
+    <button type="button" class="navbar-button nav-brand-name fs-5">Swift Mart</button>
   </div>
   <div class="navbar-right">
-    <button class="navbar-button" id="product">Products</button>
-    <button class="navbar-button" id="login-1">Login <i class="fa fa-sign-in"></i></button>
-    <button class="navbar-button" data-bs-toggle="modal" data-bs-target="#signupModal" id="signup-1">Signup</button>
-    <button class="navbar-button" id="my-cart">My Cart <i class="fa fa-shopping-cart"></i></button>
-    <button class="navbar-button" id="profile">Profile <i class="fa fa-user mx-3 text-white"></i></button>
+    <button type="button" class="navbar-button" id="product">Products</button>
+    <button type="button" class="navbar-button" id="login-1">Login <i class="fa fa-sign-in"></i></button>
+    <button type="button" class="navbar-button" data-bs-toggle="modal" data-bs-target="#signupModal" id="signup-1">Signup</button>
+    <button type="button" class="navbar-button" id="my-cart">My Cart <i class="fa fa-shopping-cart"></i></button>
+    <button type="button" class="navbar-button" id="profile">Profile <i class="fa fa-user mx-3 text-white"></i></button>
   </div>
 </nav>
 
@@ -62,7 +62,7 @@
 <!-- signup modal -->
 <!-- first -->
 <div class="modal fade" id="signupModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl" style="width: fit-content;">
+    <div class="modal-dialog modal-xl" style="width:fit-content;">
       <div class="modal-content">
         <div class="modal-header border-0">
            <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -80,9 +80,9 @@
                         <p class="text-success fw-bold d-none" id="s-msg">Registered Success !</p>
                         <p class="fw-medium my-4">By continuing, you agree to Swift-Mart's 
                          <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
-                            <button class="next-btn d-none fw-semibold border-0" data-bs-toggle="modal" data-bs-target="#signupModal2" id="next-btn">Next</button>
-                            <button class="continue-btn fw-semibold border-0" id="continue-btn">Continue</button>
-                            <button class="signup-form-login-btn my-3 fw-semibold border-0">Existing User? Log in</button>
+                            <button type="button" class="next-btn d-none fw-semibold border-0" data-bs-toggle="modal" data-bs-target="#signupModal2" id="next-btn">Next</button>
+                            <button type="button" class="continue-btn fw-semibold border-0" id="continue-btn">Continue</button>
+                            <button type="button" class="signup-form-login-btn my-3 fw-semibold border-0">Existing User? Log in</button>
                     </form>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                 <label class="form-label" for="state">State</label>
                 <input class="form-control" type="text" id="state" name="state" />
                 <p class="emsg"></p>
-                <button class="create-btn my-2 mb-1" id="create-btn">Create Account</button>
+                <button type="button" class="create-btn my-2 mb-1" id="create-btn">Create Account</button>
             </form>
         </div>
       </div>

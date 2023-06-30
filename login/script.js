@@ -1,5 +1,6 @@
 const homeBtn = document.getElementById("home");
 const signupBtn = document.getElementById("signup");
+const signupBtn1 = document.getElementById("signup1");
 const productBtn = document.getElementById("product");
 const helpBtn = document.getElementById("help");
 const profileBtn = document.getElementById("profile");
@@ -16,6 +17,9 @@ profileBtn.addEventListener('click', ()=>{
     location.href = "/profile";
 })
 signupBtn.addEventListener('click', ()=>{
+    location.href="/signup";
+})
+signupBtn1.addEventListener('click', ()=>{
     location.href="/signup";
 })
 
