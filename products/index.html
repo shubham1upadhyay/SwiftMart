@@ -12,20 +12,91 @@
 <body>
     
     <!-- navbar -->
+   <div class="mynav">
     <nav class="navbar">
-        <div class="navbar-left">
-          <button type="button" class="navbar-button brand-name fs-5">Swift Mart</button>
-        </div>
-        <div class="navbar-right">
-          <button type="button" id="home" class="navbar-button">Home <i class="fa fa-home"></i></button>
-          <button type="button" id="my-cart" class="navbar-button">My Cart <i class="fa fa-shopping-cart"></i></button>
-          <button type="button" id="help" class="navbar-button">Help <i class="fa fa-question"></i></button>
-          <button type="button" id="profile" class="navbar-button">Profile <i class="fa fa-user"></i></button>
-        </div>
-      </nav>
+      <div class="navbar-left">
+        <button type="button" class="navbar-button brand-name fs-5">Swift Mart</button>
+      </div>
+      <div class="navbar-right">
+        <button type="button" id="home" class="navbar-button">Home <i class="fa fa-home"></i></button>
+        <button type="button" id="my-cart" class="navbar-button">My Cart <i class="fa fa-shopping-cart"></i></button>
+        <button type="button" id="help" class="navbar-button">Help <i class="fa fa-question"></i></button>
+        <button type="button" id="profile" class="navbar-button">Profile <i class="fa fa-user"></i></button>
+      </div>
+    </nav>
+   </div>
 
-      <div>Product page</div>
+      <div class="container-fluid">
 
+        <div id="search-bar" class="my-2">
+          <input class="form-control fw-semibold" type="search" name="search" id="search-input" placeholder="Search products ..." />
+        
+            <button type="button" class="filter-btn m-20 btn-primary" id="all">All</button>
+            <button type="button" class="filter-btn btn-primary" id="men">Men</button>
+            <button type="button" class="filter-btn btn-primary" id="women">Women</button>
+            <button type="button" class="filter-btn btn-primary" id="electronics">Electronics</button>
+            <button type="button" class="filter-btn btn-primary" id="jwellery">Jwellery</button>
+         
+          </div>
+        <div class="mainContainer">
+          
+          <!-- left side bar -->
+        <div>
+          <aside>
+            <section>
+              <label>Rating</label>
+              <input
+                type="range"
+                id="range"
+                min="0"
+                max="5"
+                value="0"
+                list="values"
+              />
+              <datalist id="values">
+                <option value="0" label="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+            </section>
+            <section>
+              <title>Price Range</title>
+              <ul>
+                <li>
+                  <input id="0-25" type="checkbox" name="prange" value="0-25" />
+                  <label for="0-25">$0 to $25</label>
+                </li>
+                <li>
+                  <input id="25-50" type="checkbox" name="prange" value="25-50" />
+                  <label for="25-50">$25 to $50</label>
+                </li>
+                <li>
+                  <input id="50-100" type="checkbox" name="prange" value="50-100"/>
+                  <label for="50-100">$50 to $100</label>
+                </li>
+                <li>
+                  <input id="100on" type="checkbox" name="prange" value="100+"/>
+                  <label for="100on">$100 onwards</label>
+                </li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+
+        <!-- right side main content -->
+        <div id="right-side-main-content">
+          <!-- <h4 class="text-danger fw-semibold mb-4 mt-3">Men's Clothing</h4> -->
+           <div id="product-container">
+           <!-- products will be displayed here -->
+            
+          </div>
+        </div>
+      </div>
+      </div>
+      
     
 
     <script src="script.js"></script>
