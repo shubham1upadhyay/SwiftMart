@@ -23,7 +23,7 @@ if (!sessionStorage.getItem('activeUser')) {
   }
 
 const itemContainer = document.querySelector('.items');
-const listContainer = document.querySelector('.list-container');
+const checkoutContainer = document.getElementById('checkout-container');
 const totalPrice = document.getElementById('total-price');
 
 var cartItem=[];
@@ -40,9 +40,9 @@ else{
 
 
 // display function
-function displayCart(cart){
+function displayCart(Arr){
     itemContainer.innerHTML='';
-    listContainer.innerHTML='';
+    checkoutContainer.innerHTML = '';
     if(cartItem.length==0){
         itemContainer.innerHTML=`
         <h4 class="e-msg">Cart is empty !</h4>
@@ -51,11 +51,11 @@ function displayCart(cart){
         totalPrice.innerHTML='0';
     }
 
-    cart.forEach((pro)=>{
+    Arr.forEach((pro, index)=>{
         itemContainer.innerHTML+=`
         <div class="product">
         <div class="product-img">
-        <img src = "${pro.image}" />
+        <img src = "${pro.image}" alt="product" />
         <div>
         <div class="product-details">
          <p id="p-desc">${pro.title}</>
@@ -65,9 +65,19 @@ function displayCart(cart){
          <button id="addBtn" onClick='removeFromCart(${pro.id})'>Remove From Cart</button>
           </div> 
         `;
-    })
-}
 
+        checkoutContainer.innerHTML += `
+         <div class="checkout-box">
+
+         <div class="index">${index+1}.</div>
+         <div class="checkout-title">${pro.title}</div>
+         <div><img class="checkout-img" src="${pro.image}"/></div>
+         <span class="checkout-price">$${pro.price}</span>
+         </div>
+        `
+    })
+    totalPrice.innerHTML = calculateTotalPrice();
+}
 
 // remove function
 function removeFromCart(id){
@@ -90,3 +100,35 @@ if(cartItem.length==0){
   <h4 class="e-msg">Cart is empty !</h4>
   `;
 }
+
+// calculate total price
+function calculateTotalPrice(){
+  return cartItem.reduce((acc,item)=>{
+      return acc+item.price;
+  },0)
+}
+
+document.getElementById("rzp-button1").onclick = function (e) {
+  var options = {
+    key: "rzp_test_PV1oQ0oMtgXOsq", 
+    amount: calculateTotalPrice() * 100, 
+    currency: "INR",
+    name: "Swift Mart",
+    description: "This is your order",
+    theme: {
+      color: "#000",
+    },
+    image:
+      "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
+  };
+
+  var payment = new Razorpay(options);
+  payment.open();
+  e.preventDefault();
+
+    localStorage.removeItem('cartArr');
+    cartItem = [];
+    displayCart(cartItem);
+  displayCart(cartItem);
+}
+

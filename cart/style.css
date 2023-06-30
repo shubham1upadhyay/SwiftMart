@@ -11,6 +11,12 @@ body{
     padding: 10px;
     background-color: black;
 }
+.my-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 .navbar-left{
     flex-grow: 1;
 }
@@ -37,23 +43,40 @@ body{
 }
 
 /* navbar styling ends */
-
+.items::-webkit-scrollbar{
+    display: none;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.title{
+    /* margin-left: -12px; */
+    padding: 10px;
+    position: fixed;
+    margin-top: 46px;
+    background-color: white;
+    width: 100%;
+}
 .items{
+    margin-top: 100px;
+    width: 100%;
+    height:100vh;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:250px 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap:100px 30px;
+    overflow-y: scroll;
 }
 .items img{
     width:80%;
-    height:100%;
+    height:70%;
     margin: 0px 30px;
 }
 #p-desc{
-    /* width:250px; */
+    width:200px;
     padding: 0px;
     margin: 0px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     height:50px;
     overflow-y: scroll;
 }
@@ -66,7 +89,11 @@ height:80px;
 #p-desc::-webkit-scrollbar{
     display: none;
 }
+.list-container::-webkit-scrollbar{
+    display: none;
+}
 .price{
+    margin-top: 0px;
     color:blue;
     font-weight: bolder;
 }
@@ -87,6 +114,45 @@ height:80px;
 #addBtn:hover{
     background-color: red;
     color:black
+}
+.list-container{
+    margin-top:100px;
+    width: 500px;
+    overflow-y: scroll;
+}
+.checkout-box{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    margin: 20px 0px;
+}
+.checkout-img{
+    width:35%;
+    margin: 10px;
+}
+.checkout-title{
+    font-weight: 700;
+    font-size: 12px;
+    overflow-y: hidden;
+}
+.checkout-price{
+    font-weight: 700;
+    font-size: 18px;
+    color:red;
+}
+.checkout-total-price{
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.index{
+    font-weight: 700;
+    color:green;
+}
+#rzp-button1:hover{
+    background-color: green;
+    cursor: pointer;
+    color:blue;
 }
 .e-msg{
     width: 100%;

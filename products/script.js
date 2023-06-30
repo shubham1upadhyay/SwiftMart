@@ -50,8 +50,8 @@ fetch("https://fakestoreapi.com/products")
 
 // function to display the products
 
-function displayProducts(products){
-  products.forEach(pro =>{
+function displayProducts(Arr){
+  Arr.forEach(pro =>{
     productContainer.innerHTML += `
     <div class="product">
     <div class="product-img">
@@ -71,27 +71,24 @@ function displayProducts(products){
 
 // search bar functionality
 searchBar.addEventListener('input',()=>{
-  product = productArr.filter(ele=>{
+  myArr = productArr.filter(ele=>{
     if(ele.title.toLowerCase().includes(searchBar.value.trim().toLowerCase())){
       return ele;
     }
   })
-  if(product.length==0){
+  if(myArr.length==0){
     productContainer.innerHTML=`
     <p class="e-msg"> No any product found ! 🥺</P>
     `
     return;
   }
   productContainer.innerHTML = '';
-  displayProducts(product);
+  displayProducts(myArr);
 })
-
-// product = JSON.parse(localStorage.getItem('productArr'));
-// displayProducts(product);
 
 
 allBtn.addEventListener('click', ()=>{
-  product = JSON.parse(localStorage.getItem('productArr'));
+  myArr = JSON.parse(localStorage.getItem('productArr'));
   allBtn.style.backgroundColor='black';
   allBtn.style.color='white';
   menBtn.style.color='black';
@@ -102,11 +99,11 @@ allBtn.addEventListener('click', ()=>{
   jwelleryBtn.style.backgroundColor='bisque';
   electronicsBtn.style.color='black';
   electronicsBtn.style.backgroundColor='bisque';
-  displayProducts(product)
+  displayProducts(myArr)
 })
 
 menBtn.addEventListener('click', ()=>{
-  product = productArr.filter(ele=>{
+  myArr = productArr.filter(ele=>{
     if(ele.category=="men's clothing"){
       return ele;
     }
@@ -121,11 +118,11 @@ menBtn.addEventListener('click', ()=>{
   jwelleryBtn.style.backgroundColor='bisque';
   electronicsBtn.style.color='black';
   electronicsBtn.style.backgroundColor='bisque';
-  displayProducts(product)
+  displayProducts(myArr)
 })
 
 womenBtn.addEventListener('click', ()=>{
-  product = productArr.filter(ele=>{
+  myArr = productArr.filter(ele=>{
     if(ele.category=="women's clothing"){
       return ele;
     }
@@ -140,7 +137,7 @@ womenBtn.addEventListener('click', ()=>{
   jwelleryBtn.style.backgroundColor='bisque';
   electronicsBtn.style.color='black';
   electronicsBtn.style.backgroundColor='bisque';
-  displayProducts(product)
+  displayProducts(myArr)
 })
 
 electronicsBtn.addEventListener('click', ()=>{
@@ -163,7 +160,7 @@ electronicsBtn.addEventListener('click', ()=>{
 })
 
 jwelleryBtn.addEventListener('click', ()=>{
-  product = productArr.filter(ele=>{
+  myArr = productArr.filter(ele=>{
     if(ele.category=="jewelery"){
       return ele;
     }
@@ -178,7 +175,7 @@ jwelleryBtn.addEventListener('click', ()=>{
   jwelleryBtn.style.backgroundColor='black';
   electronicsBtn.style.color='black';
   electronicsBtn.style.backgroundColor='bisque';
-  displayProducts(product)
+  displayProducts(myArr)
 })
 
 
@@ -187,19 +184,23 @@ range.addEventListener('input',()=>{
   if(range.value==0){
     displayProducts(productArr);
     return;
+  }else{
+    productContainer.innerHTML = '';
   }
-  product = productArr.filter(ele=>{
+  myArr = productArr.filter(ele=>{
     if(Math.floor(ele.rating.rate)==range.value){
       return ele;
+    }else{
+      productContainer.innerHTML = '';
     }
   })
-  if(product.length==0){
+  if(myArr.length==0){
     productContainer.innerHTML=`
     <p class="e-msg"> No any product found ! 🥺</P>
     `
     return;
   }
-  displayProducts(product);
+  displayProducts(myArr);
 })
 
 
@@ -233,15 +234,16 @@ function filterProducts() {
   });
 
 
-  productArr = productArr.filter(p =>{
+  myArr = productArr.filter(p =>{
     if(filteredProducts.includes(p)){
       return p;
     }
   })
-  displayProducts(productArr);
+  displayProducts(myArr);
 }
 
 
+// adding product to my cart
 function addToCart(id){
   let item;
   productArr.forEach((ele)=>{
@@ -249,10 +251,33 @@ function addToCart(id){
       item=ele;
     }
   })
+  popup();
   cartArr.push(item);
   localStorage.setItem('cartArr',JSON.stringify(cartArr));
-  console.log(JSON.parse(localStorage.getItem('cartArr')));
 }
+
+
+function popup(){
+  if (!sessionStorage.getItem('activeUser')) {
+    let popupContainer = document.createElement('div');
+    popupContainer.textContent = 'Please log in first !';
+    popupContainer.classList.add('popup');
+    document.body.appendChild(popupContainer);
+    setTimeout(function() {
+      document.body.removeChild(popupContainer);
+    }, 2000);
+    return;
+  }
+  let popupContainer = document.createElement('div');
+  popupContainer.textContent = 'Product added to cart 😀';
+  popupContainer.classList.add('popup');
+
+  document.body.appendChild(popupContainer);
+
+  setTimeout(function() {
+    document.body.removeChild(popupContainer);
+  }, 2000);
+  }
 
 
 
@@ -281,4 +306,5 @@ function addToCart(id){
 
 if (!sessionStorage.getItem('activeUser')) {
     profileBtn.style.display = "none";
+
 }
