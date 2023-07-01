@@ -180,7 +180,6 @@ jwelleryBtn.addEventListener('click', ()=>{
 
 
 range.addEventListener('input',()=>{
-  console.log(range.value);
   if(range.value==0){
     displayProducts(productArr);
     return;
@@ -189,6 +188,28 @@ range.addEventListener('input',()=>{
   }
   myArr = productArr.filter(ele=>{
     if(Math.floor(ele.rating.rate)==range.value){
+      return ele;
+    }else{
+      productContainer.innerHTML = '';
+    }
+  })
+  if(myArr.length==0){
+    productContainer.innerHTML=`
+    <p class="e-msg"> No any product found ! 🥺</P>
+    `
+    return;
+  }
+  displayProducts(myArr);
+})
+range2.addEventListener('input',()=>{
+  if(range2.value==0){
+    displayProducts(productArr);
+    return;
+  }else{
+    productContainer.innerHTML = '';
+  }
+  myArr = productArr.filter(ele=>{
+    if(Math.floor(ele.rating.rate)==range2.value){
       return ele;
     }else{
       productContainer.innerHTML = '';

@@ -92,6 +92,30 @@
                 </li>
               </ul>
             </section>
+
+            <!-- by color -->
+            <section>
+              <label class="color-label" for="color">Select Color</label>
+               <br>
+                <button id="red" type="button" class="color-btn mx-1"></button>
+                <button id="blue" type="button" class="color-btn mx-1"></button>
+                <button id="green" type="button" class="color-btn mx-1"></button>
+                <button id="yellow" type="button" class="color-btn mx-1"></button>
+                <button id="pink" type="button" class="color-btn mx-1"></button>
+            </section>
+
+            <!-- by size -->
+            <section class="size-filter">
+              <label class="size" for="size">Select Size</label>
+               <ul>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+                <li>XXL</li>
+               </ul>
+            </section>
+
           </aside>
         </div>
 
@@ -105,9 +129,93 @@
         </div>
       </div>
       </div>
-      
-    
 
+
+    
+      <!-- floating button for filter section, for mobile screen -->
+      <button type="button" id="floating-button" data-bs-toggle="offcanvas" data-bs-target="#filterCard" aria-controls="filterCard"><i class="fa fa-filter"></i></button>
+      <div class="offcanvas offcanvas-sm offcanvas-start bg-black" tabindex="-1" id="filterCard" aria-labelledby="filterCardLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-white" id="filterCardLabel">Filter</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="filter-card">
+
+             <!-- rating filterations setup -->
+             <section>
+              <label class="form-label mt-4">Rating</label>
+              <input
+              class="form-range"
+                type="range"
+                id="range2"
+                min="0"
+                max="5"
+                value="0"
+                list="values"
+              />
+              <datalist id="values2">
+                <option value="0" label="0"></option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+            </section>
+
+            <!--by  price setup -->
+            <section>
+              <label class="form-label mt-4">Price Range</label>
+              <ul class="list-unstyled mx-3">
+                <li>
+                  <input id="0-25-1" type="checkbox" name="prange" value="0-25" />
+                  <label for="0-25-1">$0 to $25</label>
+                </li>
+                <li>
+                  <input id="25-50-1" type="checkbox" name="prange" value="25-50" />
+                  <label for="25-50-1">$25 to $50</label>
+                </li>
+                <li>
+                  <input id="50-100-1" type="checkbox" name="prange" value="50-100"/>
+                  <label for="50-100-1">$50 to $100</label>
+                </li>
+                <li>
+                  <input id="100on-1" type="checkbox" name="prange" value="100+"/>
+                  <label for="100on-1">$100 onwards</label>
+                </li>
+              </ul>
+            </section>
+
+            <!-- by color -->
+            <section>
+              <label class="color-label" for="color">Select Color</label>
+               <br>
+                <button id="red-1" type="button" class="color-btn mx-1"></button>
+                <button id="blue-1" type="button" class="color-btn mx-1"></button>
+                <button id="green-1" type="button" class="color-btn mx-1"></button>
+                <button id="yellow-1" type="button" class="color-btn mx-1"></button>
+                <button id="pink-1" type="button" class="color-btn mx-1"></button>
+            </section>
+
+            <!-- by size -->
+            <section class="size-filter">
+              <label class="size" for="size">Select Size</label>
+               <ul>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+                <li>XXL</li>
+               </ul>
+            </section>
+          
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="button" data-bs-dismiss="offcanvas" class="btn btn-outline-light">Filter</button>
+        </div>
+      </div>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

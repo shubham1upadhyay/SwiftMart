@@ -228,9 +228,76 @@ height:80px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     color: green;
-  }
-
-
+}
+#floating-button{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: red;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px black;
+}
+.color-label{
+    margin-top: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.color-btn{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+}
+#red{
+    background-color:red;
+}
+#blue{
+    background-color:blue;
+}
+#yellow{
+    background-color:yellow;
+}
+#green{
+    background-color:green;
+}
+#pink{
+    background-color:rgb(244, 135, 153);
+}
+.filter-card{
+    color:white;
+}
+.size{
+    margin-top: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.size-filter ul{
+    padding: 0px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+}
+.size-filter li{
+    width: max-content;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px grey dashed;
+    font-weight: 700;
+}
+.size-filter li:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: black;
+}
+.size-filter li:active{
+    background-color: rgb(216, 86, 108);
+}
   /* media queries */
 
   @media screen and (max-width:768px) {
@@ -257,6 +324,9 @@ height:80px;
     }
     #search-bar{
         width: 100%;
+    }
+    #floating-button{
+        display: block;
     }
     .filter-buttons{
         width: 100%;
