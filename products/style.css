@@ -237,7 +237,7 @@ height:80px;
     #search-bar input{
         width: 100%;
         margin-left:-15px;
-        margin-top: -50px;
+        margin-top: -45px;
     }
     .mynav{
         width: 100%;
@@ -260,12 +260,11 @@ height:80px;
     }
     .filter-buttons{
         width: 100%;
-        margin-top: 200px;
-        font-size: 12px;
+        margin-top: 230px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-left: -45%;
+        margin-left: -35%;
 
     }
     .filter-btn{
