@@ -44,14 +44,14 @@ fetch("https://fakestoreapi.com/products")
   productArr=data;
   localStorage.setItem('productArr',JSON.stringify(productArr));
   displayProducts(productArr);
-  console.log(productArr);
 });
 
 
 // function to display the products
 
-function displayProducts(Arr){
-  Arr.forEach(pro =>{
+function displayProducts(product){
+  productContainer.innerHTML = '';
+  product.forEach(pro =>{
     productContainer.innerHTML += `
     <div class="product">
     <div class="product-img">
@@ -103,11 +103,13 @@ allBtn.addEventListener('click', ()=>{
 })
 
 menBtn.addEventListener('click', ()=>{
-  myArr = productArr.filter(ele=>{
-    if(ele.category=="men's clothing"){
-      return ele;
-    }
-  })
+
+   myArr = productArr.filter(ele=>{
+      if(ele.category === "men's clothing"){
+        return ele;
+       
+      }
+  });
   allBtn.style.backgroundColor='bisque';
   allBtn.style.color='black';
   menBtn.style.color='white';
@@ -123,8 +125,9 @@ menBtn.addEventListener('click', ()=>{
 
 womenBtn.addEventListener('click', ()=>{
   myArr = productArr.filter(ele=>{
-    if(ele.category=="women's clothing"){
+    if(ele.category ==="women's clothing"){
       return ele;
+      console.log(ele)
     }
   })
   allBtn.style.backgroundColor='bisque';
