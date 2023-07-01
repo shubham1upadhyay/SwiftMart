@@ -73,6 +73,7 @@ aside{
     border: none;
     border-radius: 5px;
     font-weight: 700;
+    margin-right: 20px;
 }
 .filter-buttons{
     width: 100%;
@@ -234,32 +235,52 @@ height:80px;
 
   @media screen and (max-width:768px) {
     #search-bar input{
-        width: 80%;
+        width: 100%;
         margin-left:-15px;
         margin-top: -50px;
     }
+    .mynav{
+        width: 100%;
+        font-size: 18px;
+    }
     .navbar{
-        width: max-content;
+        width: 100%;
+        margin: 0px;
+        padding:0px;
+    }
+    .navbar-right{
+        flex-direction: column;
+        align-items: flex-start;
     }
     aside{
         display: none;
     }
-    .filter-btn{
-        margin-top: 30px;
-        margin-right: 30px;
+    #search-bar{
+        width: 100%;
     }
     .filter-buttons{
-        margin-left: -220px;
-        margin-bottom: 30px;
+        width: 100%;
+        margin-top: 200px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: -45%;
+
+    }
+    .filter-btn{
+        margin-right: 2%;
+    }
+    .mainContainer{
+        width: 100%;
     }
     #product-container{
-        width: 75%;
+        width: 100%;
         grid-template-columns: repeat(2, 1fr);
         gap:250px 20px;
-        /* margin-left: -20px; */
     }
     #product-container img{
-        width:40%;
+        width: 60%;
         height:100%;
     }
     #right-side-main-content{
