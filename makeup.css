@@ -176,8 +176,13 @@ footer{
         margin-top: 100px;
     }
     .my-shop-brand-img img{
-        margin-top: 0px;
+        margin-top: 50px;
         width: 100%;
+    }
+    #after-login{
+       width: 100%;
+       font-size: 18px;
+       margin-top: -30px;
     }
 
 

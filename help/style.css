@@ -35,5 +35,20 @@ body{
 .brand-name:hover{
     color:yellow;
 }
+.notes{
+    color: red;
+    font-weight: bolder;
+}
 
 /* navbar styling ends */
+
+@media screen and (max-width:768px) {
+    .card{
+        margin: 0px;
+    }
+    .notes{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+}
