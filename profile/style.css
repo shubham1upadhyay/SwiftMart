@@ -92,8 +92,24 @@ body{
     width:130px;
     height:50px;
     font-weight: 700;
-    border: 1px red solid;
 }
 #logout:hover{
     background-color: #9a40a9;
+}
+.main-container{
+    display: flex;
+    flex-wrap: now-wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .main-container{
+        flex-direction: column;
+    }
 }

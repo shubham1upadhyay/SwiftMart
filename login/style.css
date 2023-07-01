@@ -5,11 +5,19 @@ body{
 
 /* navbar styling starts */
 .navbar{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: black;
+}
+.my-nav{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .navbar-left{
     flex-grow: 1;
@@ -38,9 +46,14 @@ body{
 
 /* navbar styling ends */
 
-
-
-
+.login-template{
+    display: flex;
+}
+.card{
+    /* margin-left: -100px; */
+    /* width:; */
+    margin-top: 70px;
+}
 .login-banner img{
     height:80vh;
 }
@@ -79,4 +92,23 @@ body{
 .form-control , button{  
     box-shadow: none!important;
     outline: -webkit-focus-ring-color auto 0px!important;
+}
+
+
+
+
+
+/* media queries */
+
+@media screen and (max-width:768px) {
+   .login-template{
+    flex-direction: column;
+   }
+   .login-banner-img{
+    width: 100%;
+   }
+   .card{
+    width: max-content;
+    margin-top: 120px;
+   }
 }

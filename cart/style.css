@@ -5,6 +5,7 @@ body{
 
 /* navbar styling starts */
 .navbar{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +49,12 @@ body{
 }
 body::-webkit-scrollbar{
     display: none;
+}
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 .title{
     /* margin-left: -12px; */
@@ -158,4 +165,42 @@ height:80px;
     width: 100%;
     color:red;
     margin: 200px 600px;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    
+    .navbar-right{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .e-msg{
+        margin: 50px 0px;
+    }
+    .navbar{
+        width: 100%;
+        margin: 0px;
+        padding:0px;
+    }
+    .title{
+        display: none;
+    }
+    .main-container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .list-container{
+        margin-top:100px;
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .container-fluid{
+        margin-top: 80px;
+    }
 }
