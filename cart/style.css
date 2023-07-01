@@ -122,6 +122,19 @@ height:80px;
     background-color: red;
     color:black
 }
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    color: green;
+}
 .list-container{
     margin-top:100px;
     width: 500px;

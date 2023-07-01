@@ -146,7 +146,9 @@ body::-webkit-scrollbar{
 footer{
     margin-bottom: -20px;
 }
-
+#after-login{
+    display: none;
+}
 
 
 /* media queries */

@@ -90,7 +90,7 @@ function removeFromCart(id){
       }
   })
   cartItem.splice(indexToRemove,1);
-
+ popup();
   localStorage.setItem('cartArr',JSON.stringify(cartItem));
   displayCart(cartItem);
 }
@@ -100,6 +100,18 @@ if(cartItem.length==0){
   <h4 class="e-msg">Cart is empty !</h4>
   `;
 }
+
+function popup(){
+  let popupContainer = document.createElement('div');
+  popupContainer.textContent = 'Product removed from cart 😒';
+  popupContainer.classList.add('popup');
+
+  document.body.appendChild(popupContainer);
+
+  setTimeout(function() {
+    document.body.removeChild(popupContainer);
+  }, 2000);
+  }
 
 // calculate total price
 function calculateTotalPrice(){

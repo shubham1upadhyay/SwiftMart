@@ -245,4 +245,5 @@ if (sessionStorage.getItem('activeUser')) {
   loginBtn2.style.display = "none";
   signupBtn1.style.display="none";
   signupBtn2.style.display = "none";
+  document.getElementById("after-login").style.display= "block";
 }
