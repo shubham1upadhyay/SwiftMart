@@ -63,7 +63,7 @@ loginBtn.addEventListener('click', (event)=>{
                     location.href = '/profile'
                     emsg1.innerText = '';
                 }else{
-                    document.getElementById('msg').innerText = "Thank god, but now what is this 🤨"
+                    document.getElementById('msg').innerText = "Email is correct !, but now what is this 🤨"
                     emsg1.innerText = "Incorrect Password";
                     emsg1.style.color = "red";
                 }

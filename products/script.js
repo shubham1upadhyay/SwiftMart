@@ -299,33 +299,3 @@ function popup(){
     document.body.removeChild(popupContainer);
   }, 2000);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if (!sessionStorage.getItem('activeUser')) {
-    profileBtn.style.display = "none";
-
-}
